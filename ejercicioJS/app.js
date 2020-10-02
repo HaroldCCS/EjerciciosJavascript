@@ -130,3 +130,9 @@ valor1.addEventListener('keyup', function() {
 valor2.addEventListener('keyup', function() {
     operacion(simbolo);
 });
+
+function eliminar() {
+    valor1.value = '';
+    valor2.value = '';
+    resultado.innerHTML = "";
+}
