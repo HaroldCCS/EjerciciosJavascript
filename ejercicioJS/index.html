@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+    crossorigin="anonymous"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary" >
+        <a class="navbar-brand" >JavaScript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link"  onclick="verEjercicio(1)">Ejercicio 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="verEjercicio(2)">Ejercicio 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="verEjercicio(3)">Ejercicio 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="verEjercicio(4)">Ejercicio 4</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--EJERCICIO 1-->
+        <div id="ejercicio1" class="mt-5">
+            <h2>Ejercicio 1</h2>
+            <p>Invertir frase, contar cuantas letras tiene y cuantos espacios.</p>
+            <div class="form-group">
+                <label>Frase invertida: </label>
+                <input type="text" class="form-control" id="palabraInput">
+            </div>
+
+            <div id="imprirPalabra"></div>
+        </div>
+        <!--EJERCICIO 2-->
+        <div id="ejercicio2" class="mt-5" style="display: none;">
+            <h2>Ejercicio 2</h2>
+            <p>agregar guiones a cada letra y si hay un espacio agregarle doble guion.</p>
+
+            <div class="form-group">
+                <label>frase con guiones: </label>
+                <input type="text" class="form-control" id="cadenaInput">
+            </div>
+
+            <div id="imprirCadena"></div>
+        </div>
+        <!--EJERCICIO 3-->
+        <div id="ejercicio3" class="mt-5" style="display: none;">
+            <h2>Ejercicio 3</h2>
+            <p>Ingresar un listado de nombres, validar que estos no se repitan y si lo ingresado es igual a nada, finalizar el proceso.</p>
+
+            <div class="form-group">
+                <label>Nombre: </label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="boton"  onclick="guardarNombre()">
+                guardar
+            </button>
+
+            <div id="error"></div><br>
+            <div id="tabla"></div>
+        </div>
+
+        <div id="ejercicio4" class="mt-5" style="display: none;">
+            <h2>Ejercicio 4</h2>
+            <p>Realizar las operaciones de una calculadora con 2 variables.</p>
+            <br>
+                <div class="row">
+                    <div class="col-4">
+                            <input type="number" class="form-control" id="valor1">
+                    </div>
+                    <div class="col-auto">
+                            <button type="button" class="btn btn-light" onclick="simbolo = '+'; operacion(simbolo);">+</button>
+                            <button type="button" class="btn btn-light" onclick="simbolo = '-'; operacion(simbolo);">-</button>
+                            <button type="button" class="btn btn-light" onclick="simbolo = 'x'; operacion(simbolo);">x</button>
+                            <button type="button" class="btn btn-light" onclick="simbolo = '/'; operacion(simbolo);">/</button>
+                    </div>
+                    <div class="col-4">
+                            <input type="number" class="form-control" id="valor2">
+                    </div>
+                </div>
+                <div class="alert alert-success mt-4" role="alert" id="resultado"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
